@@ -35,7 +35,7 @@ def transcribe_audio(file_path):
     print(result)
     return result["text"]
 
-@app.route('/transcribe', methods=['POST'])
+@app.route('/transcribe', methods=['GET'])
 def transcribe_endpoint():
     print("Enetered transcribe end point")
     if model is None:

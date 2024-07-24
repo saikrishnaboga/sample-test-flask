@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/transcribe')
 def index():
     print("Enetered transcribe end point")
-    return render_template('index.html')
+    return jsonify({'transcription': "implemenet"})
 
 
 if __name__ == '__main__':

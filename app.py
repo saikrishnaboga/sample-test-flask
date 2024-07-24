@@ -1,11 +1,10 @@
-from flask import Flask, request, jsonify
-
+from flask import Flask, render_template, request, jsonify 
 app = Flask(__name__)
 
 @app.route('/transcribe')
 def index():
-    print("Enetered transcribe end point")
-    return jsonify({'transcription': "implemenet"})
+    return jsonify({'transcription': "transcription"})
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

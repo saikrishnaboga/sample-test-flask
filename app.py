@@ -28,6 +28,10 @@ except Exception as e:
     print(f"Error loading Whisper model: {e}")
     model = None
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
 def transcribe_audio(file_path):
     print("Entered transcribe_audio")

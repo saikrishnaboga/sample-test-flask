@@ -4,6 +4,10 @@ let recordings = [];
 let selectedRecording = null;
 let wavesurfer;
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 function startRecording() {
     navigator.mediaDevices.getUserMedia({ audio: true })
         .then(stream => {
